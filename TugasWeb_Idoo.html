@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Institut Teknologi Bandung — Profil Resmi (Demo)</title>
+  <meta name="description" content="Profil singkat ITB — fakultas, program, galeri, berita, pendaftaran, dan kontak. Template profesional dengan dark mode, carousel, dan animasi." />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    :root{--itb-blue:#0a3a75;--muted:#6c757d;--bg:#f7f9fc}
+    [data-theme="dark"]{--bg:#0b1220;color:#e6eef8}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:inherit}
+    .navbar{background:linear-gradient(90deg,var(--itb-blue),#063265)}
+    .navbar-brand{font-weight:800;color:#fff}
+    .nav-link{color:rgba(255,255,255,0.9) !important}
+    .hero{min-height:68vh;background:url('https://itb.ac.id/files/dokumentasi/itb-campus.jpg') center/cover no-repeat;position:relative;display:flex;align-items:center}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(10,58,117,0.65), rgba(3,18,48,0.65));}
+    .hero .container{position:relative;z-index:2;color:#fff}
+    .logo{height:48px;width:auto}
+    .card-rounded{border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.08)}
+    .section-title{color:var(--itb-blue);font-weight:800;margin-bottom:1rem}
+    footer{background:var(--itb-blue);color:#fff;padding:30px 0}
+    .dark-toggle{cursor:pointer}
+    .gallery-img{height:180px;object-fit:cover;border-radius:8px}
+    .faculty-list li{margin-bottom:8px}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="itb.jpg" alt="ITB Logo" class="logo me-2">Institut Teknologi Bandung
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faculties">Fakultas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#programs">Program</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="#admissions">Pendaftaran</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        <li class="nav-item ms-3"><button id="themeToggle" class="btn btn-sm btn-outline-light dark-toggle">Dark Mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO + CAROUSEL -->
+<section class="hero mb-5">
+  <div class="container text-center">
+    <h1 class="display-5 fw-bold" data-aos="fade-up">Institut Teknologi Bandung</h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="100">Progress in Harmony — Pusat pendidikan, penelitian, dan inovasi tingkat nasional dan internasional.</p>
+    <div class="mt-3" data-aos="fade-up" data-aos-delay="200">
+      <a href="#admissions" class="btn btn-light btn-lg me-2">Daftar</a>
+      <a href="#programs" class="btn btn-outline-light btn-lg">Program</a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <!-- CAROUSEL SLIDER -->
+  <div id="campusCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-aos="zoom-in">
+    <div class="carousel-inner rounded-3 overflow-hidden">
+      <div class="carousel-item active">
+        <img src="kampus1.jpg" class="d-block w-100" alt="Kampus 1">
+      </div>
+      <div class="carousel-item">
+        <img src="kampus2.jpg" class="d-block w-100" alt="Kampus 2">
+      </div>
+      <div class="carousel-item">
+        <img src="gedung-kampus-itb-ganesa_169.webp" class="d-block w-100" alt="Kampus 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#campusCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#campusCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="mb-5">
+    <h2 class="section-title">Tentang ITB</h2>
+    <div class="row align-items-center">
+      <div class="col-lg-7" data-aos="fade-right">
+        <p>Institut Teknologi Bandung (ITB) adalah perguruan tinggi riset publik yang berdiri sejak 1920 (sebagai TH Bandung) dan resmi menjadi ITB pada 1959. ITB memiliki reputasi unggul di bidang sains, teknologi, seni, dan manajemen, serta berkontribusi pada pembangunan nasional melalui pendidikan dan penelitian.</p>
+        <ul>
+          <li>Visi: Menjadi institusi pendidikan dan penelitian berkelas dunia.</li>
+          <li>Motto: <em>Progress in Harmony</em>.</li>
+        </ul>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="card card-rounded p-3">
+          <h5 class="fw-bold">Fakta Singkat</h5>
+          <p class="mb-1"><strong>Didirikan:</strong> 3 Juli 1920 (sebagai TH Bandung)</p>
+          <p class="mb-1"><strong>Lokasi:</strong> Jl. Ganesha 10, Bandung</p>
+          <p class="mb-1"><strong>Jumlah Fakultas:</strong> 12 (sekolah & fakultas gabungan)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACULTIES -->
+  <section id="faculties" class="mb-5">
+    <h2 class="section-title">Fakultas & Sekolah (Ringkasan)</h2>
+    <p class="text-muted">ITB terdiri dari beberapa fakultas dan sekolah yang mencakup ilmu alam, teknik, seni, farmasi, serta manajemen. Berikut ringkasan utama.</p>
+
+    <div class="row g-3">
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">Fakultas Ilmu dan Teknologi Kebumian (FITB)</h6>
+          <p>Meliputi geologi, geodesi, meteorologi, dan oseanografi.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)</h6>
+          <p>Matematika, fisika, kimia, astronomi, aktuaria, dan ilmu dasar lainnya.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">Sekolah Teknik Elektro dan Informatika (STEI)</h6>
+          <p>Elektro, teknik komputer, dan ilmu komputer.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">Fakultas Teknik Mesin dan Dirgantara (FTMD)</h6>
+          <p>Teknik mesin, kedirgantaraan, dan energi.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">Fakultas Teknik Sipil dan Lingkungan (FTSL)</h6>
+          <p>Teknik sipil, lingkungan, dan infrastruktur.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="500">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">Fakultas Teknologi Industri (FTI)</h6>
+          <p>Teknik kimia, teknik industri, dan teknik material.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="600">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">SAPPK</h6>
+          <p>Sekolah Arsitektur, Perencanaan, dan Pengembangan Kebijakan.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="700">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">SBM (School of Business & Management)</h6>
+          <p>Manajemen, bisnis, dan entrepreneurship.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="800">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">FSRD (Fakultas Seni Rupa & Desain)</h6>
+          <p>Seni rupa, desain komunikasi visual, dan desain produk.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="900">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">SITH & SF</h6>
+          <p>Sekolah Ilmu dan Teknologi Hayati (biologi, mikrobiologi) & Sekolah Farmasi.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="mt-3 text-muted">(Daftar lengkap program studi tersedia di halaman resmi ITB.)</p>
+  </section>
+
+  <!-- PROGRAMS (sample list) -->
+  <section id="programs" class="mb-5">
+    <h2 class="section-title">Program Studi Unggulan (Contoh)</h2>
+    <div class="row g-3">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">Teknik Informatika</h6>
+          <p>Kurikulum: AI, data science, software engineering.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">Teknik Sipil</h6>
+          <p>Fokus pada perencanaan, konstruksi, dan rekayasa infrastruktur.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card card-rounded p-3 h-100">
+          <h6 class="fw-bold">Manajemen (SBM)</h6>
+          <p>Business, finance, entrepreneurship, dan riset manajerial.</p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-3 text-muted">Untuk daftar lengkap program dan kurikulum, kunjungi <a href="https://itb.ac.id/program-studi-sarjana" target="_blank">halaman resmi ITB</a>.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="mb-5">
+    <h2 class="section-title">Galeri Foto Kampus</h2>
+    <div class="row g-3">
+      <div class="col-md-4" data-aos="zoom-in"><img src="ITB-tirto.id.png" class="gallery-img w-100" alt=""></div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100"><img src="wisuda itb.jpg" class="gallery-img w-100" alt=""></div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200"><img src="ganesha.jpg" class="gallery-img w-100" alt=""></div>
+    </div>
+  </section>
+
+  <!-- ADMISSIONS -->
+  <section id="admissions" class="mb-5">
+    <h2 class="section-title">Pendaftaran & Informasi Akademik</h2>
+    <div class="row">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="card card-rounded p-4 h-100">
+          <h5 class="fw-bold">Info Pendaftaran</h5>
+          <p>Informasi pendaftaran mahasiswa baru, jalur seleksi, dan persyaratan dapat dilihat di portal resmi ITB.</p>
+          <a href="https://admission.itb.ac.id/" target="_blank" class="btn btn-primary">Kunjungi Portal Penerimaan</a>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="card card-rounded p-4 h-100">
+          <h5 class="fw-bold">Form Kontak Cepat</h5>
+          <form>
+            <div class="mb-3"><label class="form-label">Nama</label><input class="form-control"/></div>
+            <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control"/></div>
+            <div class="mb-3"><label class="form-label">Pesan</label><textarea class="form-control" rows="4"></textarea></div>
+            <button type="button" class="btn btn-outline-primary">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="mb-5">
+    <h2 class="section-title">Kontak & Lokasi</h2>
+    <div class="row">
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="card card-rounded p-3 h-100">
+          <p><strong>Alamat:</strong> Jl. Ganesha No.10, Bandung</p>
+          <p><strong>Email:</strong> info@itb.ac.id</p>
+          <p><strong>Telepon:</strong> (022) 2500935</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container text-center">
+    <p class="mb-0">© 2025 Institut Teknologi Bandung — src.ridhofirdauslubis</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({duration:700,once:true});
+  // Dark mode toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  function setTheme(t){ if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');themeToggle.textContent='Light Mode';} else {document.documentElement.removeAttribute('data-theme');themeToggle.textContent='Dark Mode';} localStorage.setItem('theme',t);} 
+  const saved = localStorage.getItem('theme') || 'light'; setTheme(saved);
+  themeToggle.addEventListener('click',()=>{const current = document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'; setTheme(current);});
+</script>
+</body>
+</html>
